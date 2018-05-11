@@ -17,5 +17,8 @@ class StaticVariable {
     person2.value=20;
 
     System.out.println(person1.name + " " + person1.value);
+
+    StaticVariable.value = 100;
+    System.out.println(person1.name + " " + person1.value);
   }
 }
