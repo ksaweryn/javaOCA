@@ -15,7 +15,7 @@ public class Binary {
     String r = "";
     int remanent = number;
 
-    for (int i = exponent-1; i >= 0; i--) {
+    for (int i = exponent-1; i >= 0; --i) {
       r = String.valueOf(remanent % 2) + r;
       remanent /= 2;
     }
