@@ -11,7 +11,7 @@ class Emp {
 class Office {
   public static void main(String args[]){
     Emp emp = null; //Initialized to null;
-    System.out.println(emp.bankVault);
-    System.out.println(emp.getBankVault());
+    System.out.println(emp.bankVault); //It priont 0
+    System.out.println(emp.getBankVault()); // It prints 0
   }
 }

@@ -7,7 +7,8 @@ public class CourseBook extends Book{
     modifyTemplate();
     issueCount = 1;
     issueHistory();
-    countPages();
+    //It fail to compile. Below is private
+    //countPages();
 
   }
 }

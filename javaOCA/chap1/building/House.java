@@ -11,6 +11,9 @@ public class House {
     //it does not compile for protected instances author and method modifyTemplate
     //book.author="ABC";
     //book.modifyTemplate();
+    //It fails to compile error 
+    //book.issueHistory();
+
   }
 
 }

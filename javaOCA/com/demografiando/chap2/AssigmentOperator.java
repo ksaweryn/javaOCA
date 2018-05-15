@@ -1,4 +1,4 @@
-package com.demografiando.chap2_1;
+package com.demografiando.chap2;
 
 class AssigmentOperator {
 
