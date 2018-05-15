@@ -15,6 +15,9 @@ public class UnaryOperator {
     int e = 10;
     e = e++ + e + e-- - e-- + ++e;
     System.out.println(e);
+    e = 10;
+    e = ++e + e + --e - --e + e++;
+    System.out.println(e);
 
     float f = 10.01f;
     float g = 9.09f;
