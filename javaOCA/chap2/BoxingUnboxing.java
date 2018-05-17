@@ -2,7 +2,7 @@ package chap2;
 
 import java.util.ArrayList;
 
-public class BoxinUnboxing {
+public class BoxingUnboxing {
 
   public static void main(String args[]) {
 

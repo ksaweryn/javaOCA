@@ -14,7 +14,7 @@ public class CreateObjectByWrapper {
     System.out.println(c1 + " " + c2);
 
     Byte by1 = 10;
-    Byte by2 = new Byte((byte) 10);
+    Byte by2 = new Byte((byte) 10);//Literal value is always int
     Byte by3 = Byte.valueOf("10");
     System.out.println(by1 + " " + by2 + " " + by3);
 

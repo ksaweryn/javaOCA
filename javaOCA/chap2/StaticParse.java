@@ -22,7 +22,7 @@ public class StaticParse {
 
     /*It compiles but throws NumberFormatException -- Runtime exception*/
     //I can parse any string but
-    //Byte.parseByte("1223472428472389"); //It compiles but gives
+    //Byte.parseByte("1223472428472389"); //It compiles but gives NumberFormatException
 
     // Boolean.parseBoolean doesn't throw NumberFormatException, it always returns false
     // If the string to parse isn't true
