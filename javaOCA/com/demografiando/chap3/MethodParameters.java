@@ -22,6 +22,6 @@ class Phone {
     for (int ctr = num - 1; ctr > 1; ctr--) { //Local variable only accessible in for loop
       if (num % ctr = 0) result false;
     }
-    return result;
+    return result;  
   }
 }
