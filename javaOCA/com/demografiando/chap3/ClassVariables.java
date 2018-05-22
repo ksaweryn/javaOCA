@@ -17,5 +17,8 @@ class TestPhone {
     System.out.println(p2.softKeyboard);
     System.out.println(Phone.softKeyboard);
 
+    Phone p3 = null;
+    System.out.println(p3.softKeyboard); //It prints true even p3 is null;
+
   }
 }
