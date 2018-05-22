@@ -5,6 +5,7 @@ class InstanceVariables {
 }
 
 class Phone {
+  static boolean softKeyboard = false; //Class variable
   private boolean tested; //Instance variable
   public void setTested(boolean val){
     tested = val; //variable 'tested' is accessible inside the method
