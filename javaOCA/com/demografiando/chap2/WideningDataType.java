@@ -13,7 +13,7 @@ public class WideningDataType {
     short s1 = b5+b6;
     System.out.println(b3+b4); //By widening it is int
     System.out.println(((Object)s1).getClass().getName()); //By final nonaccess modifier it is short
-    //The lack of final modifier the result is int
+    //The lack of final modifier the result is intA
     System.out.println(((Object)(b1+b2)).getClass().getName());
   }
 }
