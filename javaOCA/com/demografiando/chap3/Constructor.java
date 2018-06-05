@@ -1,4 +1,4 @@
-package com.demografiando.char3;
+package com.demografiando.chap3;
 
 class Employee {
   int age;
@@ -12,7 +12,7 @@ class Employee {
 }
 
 class Office {
-  public static void main (String[] args) {
+  public static void main (String... args) {
     Employee emp = new Employee();
   }
 }
