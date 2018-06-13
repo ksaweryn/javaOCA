@@ -22,6 +22,7 @@ class StringMethods {
     //replace()
     System.out.println(s1.replace('s','J'));
     System.out.println(s1.replace("string","STRING"));
+    
 
 
   }
