@@ -18,5 +18,7 @@ public class StringConcatenation {
     //It prints nullJava
     System.out.println(a2);
 
+    
+
   }
 }
