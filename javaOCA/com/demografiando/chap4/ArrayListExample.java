@@ -17,6 +17,7 @@ public class ArrayListExample {
     myArrayListInt.add(1);
     myArrayListInt.add(2);
     myArrayListInt.add(3, 3);
+    myArrayListInt.set(2, 22);
     //myArrayListInt.addAll(4, {4, 5, 6});
 
     for (Integer i : myArrayListInt) {
@@ -38,6 +39,20 @@ public class ArrayListExample {
     }
 
     ListIterator<StringBuilder> iterator2 = myArrayList.listIterator();
+    while (iterator2.hasNext()) {
+        System.out.println(iterator2.next());
+    }
+
+    ArrayList<StringBuilder> clonedArray = (ArrayList<StringBuilder>) myArrayList.clone();
+
+    clonedArray.set(0, clonedArray.get(0).append("TESTING")); //Modifies the mutable element
+    clonedArray.set(1, new StringBuilder("DOS")); //Creates a new object ergo a new reference
+
+    iterator2 = clonedArray.listIterator();
+    while (iterator2.hasNext()) {
+        System.out.println(iterator2.next());
+    }
+    iterator2 = myArrayList.listIterator();
     while (iterator2.hasNext()) {
         System.out.println(iterator2.next());
     }
