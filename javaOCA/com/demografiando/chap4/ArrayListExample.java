@@ -58,3 +58,37 @@ public class ArrayListExample {
     }
   }
 }
+
+class BankAccount {
+  String acctNumber;
+  int accType;
+
+  public boolean equals(Object obj) {
+  //public boolean equals(BankAccount obj) {
+    /*if (obj != null) {
+      return (acctNumber.equals(obj.acctNumber) && accType == obj.accType);
+    } else {
+      return false;
+    }*/
+    if (obj instanceof BankAccount) {
+      BankAccount b = (BankAccount) obj;
+      return (acctNumber.equals(b.acctNumber) && accType == b.accType);
+    } else {
+      return false;
+    }
+  }
+}
+
+class TestMethodEquals {
+  public static void main(String... args) {
+    BankAccount b1 = new BankAccount();
+    b1.acctNumber = "01";
+    b1.accType = 1;
+    ArrayList <BankAccount> list = new ArrayList();
+    list.add(b1);
+    BankAccount b2 = new BankAccount();
+    b2.acctNumber = "01";
+    b2.accType = 1;
+    System.out.println(list.contains(b2));
+  }
+}
