@@ -64,6 +64,56 @@ class LocalTimeTest {
     LocalTime time = LocalTime.parse("15:08:23");
     System.out.println(time);
 
-  }
+    time = LocalTime.of(16, 20, 12, 98547);
+    System.out.println(time.getHour());
+    System.out.println(time.getMinute());
+    System.out.println(time.getSecond());
+    System.out.println(time.getNano());
 
+    LocalTime firstTime = LocalTime.parse("16:07:04");
+    LocalTime secondTime = LocalTime.parse("16:07:06");
+
+    if (firstTime.isBefore(secondTime)) {
+      System.out.println("First");
+    } else {
+      System.out.println("Second");
+    }
+
+    LocalTime time2 = LocalTime.of(14, 10, 0); //LocalTime var is immutable
+    LocalDate date = LocalDate.of(2016,02,28);
+    LocalDateTime dateTime = time2.atDate(date);
+    System.out.println(dateTime);
+
+  }
+}
+
+class PeriodTest {
+  public static void main (String[] args) {
+    Period p1 = Period.parse("P5y"); //Prints the same
+    System.out.println(p1);
+    Period p2 = Period.parse("P52W1D"); //Prints the same
+    System.out.println(p2);
+    LocalDateTime dateTime = LocalDateTime.parse("2052-01-31T14:18:36");
+    System.out.println(dateTime.plus(Period.ofMonths(1)));
+    LocalDateTime dateTime2 = LocalDateTime.parse("2020-01-31T14:18:36");
+    System.out.println(dateTime2.minus(Period.ofYears(2)));
+
+    LocalDate date = LocalDate.of(2052, 01, 31);
+    System.out.println(date.minus(Period.ofWeeks(4)));
+    date = LocalDate.of(2052, 01, 31);
+    System.out.println(date.minus(Period.parse("P32d")));
+
+    Period period = Period.of(2,4,40);
+    System.out.println(period.getYears());
+    System.out.println(period.getMonths());
+    System.out.println(period.getDays());
+    period = Period.parse("P34W");
+    System.out.println(period.getDays());
+
+    Period days5 = Period.of(0, 0, 5);
+    System.out.println(days5.isZero());
+
+    Period daysMinu5 = Period.of(0, 0, -5);
+    System.out.println(daysMinu5.isNegative());
+  }
 }
