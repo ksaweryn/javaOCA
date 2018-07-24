@@ -112,8 +112,28 @@ class PeriodTest {
 
     Period days5 = Period.of(0, 0, 5);
     System.out.println(days5.isZero());
+    Period days6 = Period.of(0, 0, 0);
+    System.out.println(days6.isZero());
 
     Period daysMinu5 = Period.of(0, 0, -5);
     System.out.println(daysMinu5.isNegative());
+
+    LocalDate bday = LocalDate.of(2020, 10, 29);
+    LocalDate today = LocalDate.now();
+    Period period10Days = Period.of(0, 0, 10);
+
+    if (bday.minus(period10Days).isBefore(today)) {
+      System.out.println("Time to send out reminders to friends");
+    } else {
+      System.out.println("In the else");
+    }
+    Period period5Month2 = Period.of(0, 5, 0);
+    Period period10Month2 = Period.of(0, 10, 0);
+    Period period10Days2 = Period.of(0, 0, 10);
+
+    System.out.println(period5Month2.plus(period10Month2));
+    System.out.println(period10Days2.plusDays(35));
+    System.out.println(period10Days2.plusMonths(5));
+    System.out.println(period10Days2.plusYears(5));
   }
 }
